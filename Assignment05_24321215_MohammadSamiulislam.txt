@@ -1,0 +1,214 @@
+//task1
+import java.util.Scanner;
+public class task_01{
+public static void main (String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Please Enter a String");
+String s1= sc.nextLine();
+String result="";
+for(int i=0;i<s1.length();i++){
+  char var = s1.charAt(i);
+  if(var>='a' && var<='z'){
+  result += ((char)(var-32));
+  }
+  else{
+  result += (var);
+  }
+}
+System.out.println(result);
+sc.close();
+}
+}
+  
+//task2
+import java.util.Scanner;
+public class task_02{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Please Enter a String");
+String val = sc.nextLine();
+boolean palindrome = true;
+int length= val.length();
+for(int i=0;i<(length/2);i++){
+ if(val.charAt(i)!=val.charAt(length-1-i)){
+    palindrome=false;
+    break;
+ }
+}
+ if(palindrome==true){
+   System.out.println("true");
+ }
+ else{
+   System.out.println("false");  
+ }
+sc.close();
+}
+}
+
+//task3
+import java.util.Scanner;
+public class task_03{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Please Enter a String");
+String val = sc.nextLine();
+boolean palindrome = true;
+int length= val.length();
+for(int i=0;i<(length/2);i++){
+ if(val.charAt(i)!=val.charAt(length-1-i)){
+    palindrome=false;
+    break;
+ }
+}
+ if(palindrome==true){
+   System.out.println("true");
+ }
+ else{
+   System.out.println("false");  
+ }
+sc.close();
+}
+}
+
+//task4
+import java.util.Scanner;
+public class task_04{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("Please Enter a String");
+String val = sc.nextLine();
+String result= "";
+for(int i=val.length()-1;i>=0;i--){
+  result=result+val.charAt(i);
+}
+System.out.println(result);
+sc.close();
+}
+}
+
+//task5
+import java.util.Scanner;
+public class task_05{
+public static void main(String[]args){
+Scanner sc = new Scanner(System.in);
+System.out.println("please enter a phrase");
+String s1 = sc.nextLine();
+int count1=0;
+int count2=0;
+for(int i=0;i<s1.length();i++){
+  char ch = s1.charAt(i);
+  if(Character.isLetter(ch)){
+  if(ch=='a'|| ch=='e'|| ch=='i'|| ch=='o'|| ch=='u'){
+    count1++;
+  }
+  else{
+    count2++;
+  }
+  }
+}
+if(count1>0 && count2>0 && count1%3==0 && count1%5==0){
+  System.out.println("The phrase can unlock the treasure chest!");
+}
+else{
+  System.out.println("The phrase cannot unlock the treasure chest!");
+}
+sc.close();
+}
+}
+
+//task_6
+import java.util.Scanner;
+public class task_06{
+public static void main(String[]args){  
+Scanner sc = new Scanner(System.in);
+System.out.println("Please enter a string");
+String s1 = sc.nextLine();
+String x ="";
+int l = s1.length();
+for(int i=s1.length()-1;i>=0;i--){
+  if(s1.charAt(i)== ' '||i==0){
+    if(i==0){
+     x+=s1.substring(i,l);
+    }
+    else{
+     x+=s1.substring(i+1,l)+ " ";
+    }
+    l=i;
+  }
+}
+System.out.println(x.trim());
+sc.close();
+}
+}
+
+//task7
+import java.util.Scanner;
+public class task_07{
+public static void main(String[]args){
+  Scanner sc = new Scanner(System.in);
+System.out.println("Please enter first String");
+String s1 = sc.nextLine();
+System.out.println("Please enter second String");
+String s2 = sc.nextLine();
+String x = "";
+for(int i=0;i<s1.length();i++){
+  char y = s1.charAt(i);
+  if(!s2.contains(String.valueOf(y))){
+    x+=y;
+  }
+}
+for(int i=0;i<s2.length();i++){
+  char y = s2.charAt(i);
+  if(!s1.contains(String.valueOf(y))){
+    x+=y;
+  }
+}
+System.out.println(x.toUpperCase());
+sc.close();
+}
+}
+
+//task 8
+import java.util.Scanner;
+public class task_08 {
+public static void main(String[] args) {
+ Scanner sc = new Scanner(System.in);
+ System.out.println("Enter a string:");
+ String string = sc.nextLine();
+ String result = "";        
+ boolean val = true; 
+        
+ for (int i = 0; i <strting.length(); i++) {
+   char ch = string.charAt(i);         
+  if ((ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')) {
+   if (val) {
+                    
+  if (ch >= 'A' && ch <= 'Z') {
+     ch = (char) (ch + 32);
+                    }
+   result += ch;
+ } 
+else {                    
+if (ch >= 'a' && ch <= 'z') {
+ch = (char) (ch - 32);
+ }
+result += ch;
+}              
+val = !val;
+            }    
+            else{
+result+= ch;
+ }}
+System.out.println(result);        
+ sc.close();
+    }
+}
+
+
+
+
+
+
+
+
+

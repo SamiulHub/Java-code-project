@@ -1,0 +1,221 @@
+//task1
+public class task_1{
+  public static void main(String[]args){
+   for(int i=18;i<=63;i+=9){
+      System.out.print(i);
+   if(i!=63){
+      System.out.print(","); 
+   }
+    }
+  }
+}
+
+//task_2
+  public class task_2{
+  public static void main(String[]args){  
+    for(int i=18;i<=63;i+=9){
+      if(i%2==0){
+        System.out.print(i*1);
+      }
+      else{
+        System.out.print(i*(-1));
+    }
+      if(i!=63){
+        System.out.print(",");
+      }
+    }
+     }
+     }
+//task_3
+public class task_3{
+  public static void main(String[]args){
+    int num=600;
+    int sum=0;
+    for(int i=0;i<=num;i++){
+      if(i%7==0 && i%9==0){
+        sum=sum+i;
+      }
+    }
+    System.out.println(sum);
+  }  
+  }
+
+//task_4 
+public class task_4{
+  public static void main(String[]args){
+    int sum=0;
+    for(int i=1;i<=600;i++){
+      if((i%7==0 || i%9==0)||(i%7==0 && i%9==0)){
+        sum+=i;
+      }
+    }
+    System.out.println(sum);
+  }
+ }
+
+//task_5
+public class task_5{
+ public static void main(String[]args){
+   int sum=0;
+   for(int i=1;i<=600;i++){
+     if((i%7==0 || i%9==0) && (!(i%7==0 && i%9==0))){
+       sum+=i;
+     }
+   }
+   System.out.println(sum);
+ }
+ }
+
+
+//task_6  
+public class task_6{
+  public static void main(String[]args){
+    int n = 20;
+    int y = 0;
+    for(int i=1;i<=n;i++){
+    if(i%2==0){
+       y-=Math.pow(i,2);
+    }
+    else{
+     y+=Math.pow(i,2);
+      }
+   }
+    System.out.print("The value of y is "+y);
+     }
+    }
+        
+
+//task_7
+public class task_7{
+   public static void main(String[]args){
+     int n=6;
+     int count=0;
+     System.out.println("Divisors of "+n+":");
+     for(int i=1;i<=n;i++){
+       if(n%i==0){
+         System.out.println(i);
+         count++;
+       }
+     }
+     System.out.println("Total Divisors:"+count);
+   }
+ }
+
+//task_8  
+public class task_8{
+  public static void main(String[]args){
+    int n =5;
+    int sum = 0;
+    for(int i=1;i<=(2*n);i++){
+      if(i%2!=0){
+        System.out.println(i);
+   sum=sum+i;
+      }
+    }
+    System.out.print("The sum of odd numbers are "+sum);
+  }
+  }
+
+//task_9 
+public class task_9{
+  public static void main(String[]args){
+    int n = 10;
+    int sum = 0;
+    for(int i=1;i<=n;i++){
+      sum=sum+i;
+      System.out.println("Current value:"+i+",Sum:"+sum);
+    }
+  }
+
+  //task_10
+public class task_10{
+  public static void main(String[]args){
+    int n=40;
+    for(int i=0;i<=n;i++){
+      if(i%5==0 && i%3!=0){
+       System.out.println(i);  
+      }
+    }
+  }
+  }
+
+ //task_11
+public class task_11{
+  public static void main(String[]args){ 
+    int count=0;
+    for(int n =7546;n!=0; n=(n/10)){
+      count++;
+    }
+    System.out.println("Total Digits="+count);
+  }
+ }
+
+ //task_12
+public class task_12{
+  public static void main(String[]args){ 
+    for(int value=32768;value>0;value=(value/10)){
+      int output=(value%10);
+      System.out.print(output);
+      if(value/10!=0){
+        System.out.print(",");
+      }
+    }
+  }
+  }
+
+//task_13
+public class task_13{
+public static void main (String[]args){
+  int x=10000;
+  for(int i=32768;i!=0;x=(x/10)){
+    if(i/10>0){
+    int num = i/x;
+  System.out.print(num+" ,");
+  i=i%x;
+    }
+    else{
+      int value=(i/x);
+      System.out.print(value);
+       i=i%x;
+    }
+  }
+}
+}
+ 
+//task_14
+public class task_14{
+  public static void main(String[]args){
+     int x = 5;
+    int count=0;
+    for(int i=1;i<=x;i++){
+      if(x%i==0){
+        count++;
+      }
+    }
+    if(count==2){
+      System.out.println(x+" is a prime number");
+    }
+      else{
+         System.out.println(x+" is not a prime number");
+      }
+    }
+  }
+
+//task_15
+public class task_15{
+  public static void main(String[]args){
+     int x = 6;
+    int sum=0;
+    for(int i=1;i<x;i++){
+      if(x%i==0){
+        sum+=i;
+      }
+    }
+    if(sum==x){
+      System.out.println(x+" is a perfect number");
+    }
+      else{
+         System.out.println(x+" is not a perfect number");
+      }
+    }
+  }                       
